@@ -4,8 +4,11 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
+#gem ‘autotest’ ‘4.4.6’
+#gem ‘auototest-rails-pure’ ‘4.1.2’
+
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+#gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -14,7 +17,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-
+#gem 'spork-rails', '~> 4.0.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -34,12 +37,30 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-gem 'rspec-rails', '3.2.0'
-gem 'webrat', '0.7.3'
+gem 'sqlite3', '1.3.10'
+gem 'byebug', '3.5.1'
+gem 'web-console', '2.0.0'
+gem 'spring', '1.3.2'
+#gem 'rspec-rails', '3.2.0'
+#gem 'webrat', '0.7.3'
 end
 
+
+group :test do
+  gem 'minitest-reporters', '1.0.11'
+  gem 'mini_backtrace', '0.1.3'
+  gem 'guard-minitest', '2.4.4'
+  #gem 'webrat', '0.7.3'
+  #gem 'rspec-rails', '3.2.0'
+  #gem 'spork', '0.9.2'
+end
+group :production do
+	gem 'pg', '0.18.1'
+	gem 'rails_12factor', '0.0.3'
+end
 #group :test do
-#gem 'rspec', '3.2.0' gem 'webrat', '0.7.3'
+#gem 'rspec-rails’, '3.2.0' 
+#gem 'webrat', '0.7.3'
 #end
 
 ##group :development, :test do
